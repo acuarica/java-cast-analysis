@@ -1,0 +1,72 @@
+Classfile /Volumes/Data/work/java-cast-analysis/samples/Cond.class
+  Last modified Aug 21, 2017; size 365 bytes
+  MD5 checksum 95adda5878e632a4b31006e7b48f7538
+  Compiled from "Cond.java"
+public class Cond
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#17         // java/lang/Object."<init>":()V
+   #2 = String             #18            // Ciao
+   #3 = String             #19            // Hola
+   #4 = Class              #20            // java/lang/String
+   #5 = Class              #21            // Cond
+   #6 = Class              #22            // java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               method
+  #12 = Utf8               (Z)Ljava/lang/String;
+  #13 = Utf8               StackMapTable
+  #14 = Class              #22            // java/lang/Object
+  #15 = Utf8               SourceFile
+  #16 = Utf8               Cond.java
+  #17 = NameAndType        #7:#8          // "<init>":()V
+  #18 = Utf8               Ciao
+  #19 = Utf8               Hola
+  #20 = Utf8               java/lang/String
+  #21 = Utf8               Cond
+  #22 = Utf8               java/lang/Object
+{
+  public Cond();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+
+  public static java.lang.String method(boolean);
+    descriptor: (Z)Ljava/lang/String;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=3, args_size=1
+         0: ldc           #2                  // String Ciao
+         2: astore_1
+         3: ldc           #3                  // String Hola
+         5: astore_2
+         6: iload_0
+         7: ifeq          14
+        10: aload_1
+        11: goto          15
+        14: aload_2
+        15: checkcast     #4                  // class java/lang/String
+        18: checkcast     #4                  // class java/lang/String
+        21: areturn
+      LineNumberTable:
+        line 5: 0
+        line 6: 3
+        line 7: 6
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 14
+          locals = [ class java/lang/Object, class java/lang/Object ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Object ]
+}
+SourceFile: "Cond.java"

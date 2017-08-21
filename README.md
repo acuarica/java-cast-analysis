@@ -51,7 +51,7 @@ The following snippet shows how even in the presence of a cast in the source cod
 no actual `checkcast` is emitted.
 
 ```java
-return (Object)"Foo";
+return (Object)"Ciao";
 ```
 
 ```

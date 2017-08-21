@@ -1,34 +1,61 @@
 Classfile /Volumes/Data/work/java-cast-analysis/samples/Cond.class
-  Last modified Aug 21, 2017; size 365 bytes
-  MD5 checksum 95adda5878e632a4b31006e7b48f7538
+  Last modified Aug 21, 2017; size 746 bytes
+  MD5 checksum 67d1ce620f720303dd6fe294d8835f08
   Compiled from "Cond.java"
 public class Cond
   minor version: 0
   major version: 52
   flags: ACC_PUBLIC, ACC_SUPER
 Constant pool:
-   #1 = Methodref          #6.#17         // java/lang/Object."<init>":()V
-   #2 = String             #18            // Ciao
-   #3 = String             #19            // Hola
-   #4 = Class              #20            // java/lang/String
-   #5 = Class              #21            // Cond
-   #6 = Class              #22            // java/lang/Object
-   #7 = Utf8               <init>
-   #8 = Utf8               ()V
-   #9 = Utf8               Code
-  #10 = Utf8               LineNumberTable
-  #11 = Utf8               method
-  #12 = Utf8               (Z)Ljava/lang/String;
-  #13 = Utf8               StackMapTable
-  #14 = Class              #22            // java/lang/Object
-  #15 = Utf8               SourceFile
-  #16 = Utf8               Cond.java
-  #17 = NameAndType        #7:#8          // "<init>":()V
-  #18 = Utf8               Ciao
-  #19 = Utf8               Hola
-  #20 = Utf8               java/lang/String
-  #21 = Utf8               Cond
-  #22 = Utf8               java/lang/Object
+   #1 = Methodref          #15.#28        // java/lang/Object."<init>":()V
+   #2 = String             #29            // Ciao
+   #3 = String             #30            // Hola
+   #4 = Class              #31            // java/lang/String
+   #5 = Methodref          #9.#32         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #6 = Double             2.3d
+   #8 = Methodref          #33.#34        // java/lang/Double.valueOf:(D)Ljava/lang/Double;
+   #9 = Class              #35            // java/lang/Integer
+  #10 = Methodref          #9.#36         // java/lang/Integer.intValue:()I
+  #11 = Class              #37            // java/lang/Float
+  #12 = Methodref          #11.#38        // java/lang/Float.floatValue:()F
+  #13 = Methodref          #11.#39        // java/lang/Float.valueOf:(F)Ljava/lang/Float;
+  #14 = Class              #40            // Cond
+  #15 = Class              #41            // java/lang/Object
+  #16 = Utf8               <init>
+  #17 = Utf8               ()V
+  #18 = Utf8               Code
+  #19 = Utf8               LineNumberTable
+  #20 = Utf8               method1
+  #21 = Utf8               (Z)Ljava/lang/String;
+  #22 = Utf8               StackMapTable
+  #23 = Class              #41            // java/lang/Object
+  #24 = Utf8               method2
+  #25 = Utf8               (Z)Ljava/lang/Number;
+  #26 = Utf8               SourceFile
+  #27 = Utf8               Cond.java
+  #28 = NameAndType        #16:#17        // "<init>":()V
+  #29 = Utf8               Ciao
+  #30 = Utf8               Hola
+  #31 = Utf8               java/lang/String
+  #32 = NameAndType        #42:#43        // valueOf:(I)Ljava/lang/Integer;
+  #33 = Class              #44            // java/lang/Double
+  #34 = NameAndType        #42:#45        // valueOf:(D)Ljava/lang/Double;
+  #35 = Utf8               java/lang/Integer
+  #36 = NameAndType        #46:#47        // intValue:()I
+  #37 = Utf8               java/lang/Float
+  #38 = NameAndType        #48:#49        // floatValue:()F
+  #39 = NameAndType        #42:#50        // valueOf:(F)Ljava/lang/Float;
+  #40 = Utf8               Cond
+  #41 = Utf8               java/lang/Object
+  #42 = Utf8               valueOf
+  #43 = Utf8               (I)Ljava/lang/Integer;
+  #44 = Utf8               java/lang/Double
+  #45 = Utf8               (D)Ljava/lang/Double;
+  #46 = Utf8               intValue
+  #47 = Utf8               ()I
+  #48 = Utf8               floatValue
+  #49 = Utf8               ()F
+  #50 = Utf8               (F)Ljava/lang/Float;
 {
   public Cond();
     descriptor: ()V
@@ -41,7 +68,7 @@ Constant pool:
       LineNumberTable:
         line 2: 0
 
-  public static java.lang.String method(boolean);
+  public static java.lang.String method1(boolean);
     descriptor: (Z)Ljava/lang/String;
     flags: ACC_PUBLIC, ACC_STATIC
     Code:
@@ -68,5 +95,39 @@ Constant pool:
           locals = [ class java/lang/Object, class java/lang/Object ]
         frame_type = 64 /* same_locals_1_stack_item */
           stack = [ class java/lang/Object ]
+
+  public static java.lang.Number method2(boolean);
+    descriptor: (Z)Ljava/lang/Number;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: iconst_4
+         1: invokestatic  #5                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         4: astore_1
+         5: ldc2_w        #6                  // double 2.3d
+         8: invokestatic  #8                  // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
+        11: astore_2
+        12: iload_0
+        13: ifeq          27
+        16: aload_1
+        17: checkcast     #9                  // class java/lang/Integer
+        20: invokevirtual #10                 // Method java/lang/Integer.intValue:()I
+        23: i2f
+        24: goto          34
+        27: aload_2
+        28: checkcast     #11                 // class java/lang/Float
+        31: invokevirtual #12                 // Method java/lang/Float.floatValue:()F
+        34: invokestatic  #13                 // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        37: areturn
+      LineNumberTable:
+        line 11: 0
+        line 12: 5
+        line 13: 12
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 27
+          locals = [ class java/lang/Object, class java/lang/Object ]
+        frame_type = 70 /* same_locals_1_stack_item */
+          stack = [ float ]
 }
 SourceFile: "Cond.java"

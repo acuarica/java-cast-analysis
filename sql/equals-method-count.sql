@@ -1,0 +1,11 @@
+
+select count(*) equals_method_count
+from method
+where
+  methodname='equals' and
+  methoddescid=(
+    select methoddescid
+    from cp_methoddesc
+    where methoddesc ='(Ljava/lang/Object;)Z'
+  )
+;

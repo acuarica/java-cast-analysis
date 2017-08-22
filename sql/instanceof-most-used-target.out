@@ -1,0 +1,123 @@
+
+select *
+from (
+  select
+    t.opcode,
+    (select name from opcode where id=t.opcode),
+    t.args,
+    (select fullmethodname from cp_methodref_view where methodrefid=t.args),
+    count(*) as cc
+  from (
+    select c.opcode, c.args
+    from (
+      select opcodeindex-1 as opcodeindex from code
+      where opcode=(select id from opcode where name='instanceof')
+    ) t
+    left join code c on c.opcodeindex=t.opcodeindex
+  ) t
+  group by opcode, args
+)
+order by cc desc
+limit 100
+;
+opcode|(select name from opcode where id=t.opcode)|args|(select fullmethodname from cp_methodref_view where methodrefid=t.args)|cc
+43|aload_1|||3135273
+44|aload_2|||1222278
+42|aload_0|||758913
+45|aload_3|||700879
+25|aload|||669282
+180|getfield|||415667
+50|aaload|||80124
+185|invokeinterface|||66216
+25|aload|711|java/lang/Object.equals(Ljava/lang/Object;)Z|43367
+25|aload|155666|scala/runtime/BoxesRunTime.equalsNumObject(Ljava/lang/Number;Ljava/lang/Object;)Z|22563
+25|aload|47253|scala/collection/immutable/$colon$colon.tl$1()Lscala/collection/immutable/List;|20468
+182|invokevirtual|47253|scala/collection/immutable/$colon$colon.tl$1()Lscala/collection/immutable/List;|20322
+89|dup|||16445
+25|aload|11494|java/io/FilterInputStream.skip(J)J|14387
+196|wide|||13060
+182|invokevirtual|47025|scala/Tuple2._2()Ljava/lang/Object;|10710
+182|invokevirtual|47024|scala/Tuple2._1()Ljava/lang/Object;|9831
+182|invokevirtual|919|java/lang/reflect/InvocationTargetException.getTargetException()Ljava/lang/Throwable;|9516
+25|aload|3|java/io/PrintStream.println(Ljava/lang/String;)V|9232
+25|aload|147488|scala/collection/immutable/$colon$colon.tl$access$1()Lscala/collection/immutable/List;|7101
+25|aload|2179|java/awt/Label.getText()Ljava/lang/String;|6803
+25|aload|11480|org/apache/derby/iapi/services/io/FormatableLongHolder.<init>(J)V|6628
+25|aload|46983|scala/Some.<init>(Ljava/lang/Object;)V|6493
+25|aload|47025|scala/Tuple2._2()Ljava/lang/Object;|5891
+25|aload|46724|java/lang/Throwable.getCause()Ljava/lang/Throwable;|5422
+0|nop|||5140
+182|invokevirtual|18534406|org/distributeme/core/interceptor/InterceptorResponse.getException()Ljava/lang/Exception;|5065
+25|aload|831|java/lang/StringBuilder.toString()Ljava/lang/String;|4931
+182|invokevirtual|48570|java/lang/RuntimeException.getCause()Ljava/lang/Throwable;|4510
+25|aload|216932|javax/swing/JLabel.<init>(Ljava/lang/String;Ljavax/swing/Icon;I)V|4498
+25|aload|919|java/lang/reflect/InvocationTargetException.getTargetException()Ljava/lang/Throwable;|4247
+25|aload|88|java/lang/String.equals(Ljava/lang/Object;)Z|4070
+182|invokevirtual|47021|scala/Option.get()Ljava/lang/Object;|3748
+25|aload|18307|org/apache/derby/impl/sql/execute/BaseActivation.getPreparedStatement()Lorg/apache/derby/iapi/sql/execute/ExecPreparedStatement;|3743
+182|invokevirtual|882068|scala/reflect/internal/Trees$Select.qualifier()Lscala/reflect/internal/Trees$Tree;|3559
+25|aload|47021|scala/Option.get()Ljava/lang/Object;|3544
+182|invokevirtual|77684|org/bouncycastle/asn1/ASN1Sequence.getObjectAt(I)Lorg/bouncycastle/asn1/ASN1Encodable;|3491
+25|aload|759|HTTPClient/BufferedInputStream.markForSearch()V|3358
+182|invokevirtual|882175|scala/reflect/internal/Trees$Apply.fun()Lscala/reflect/internal/Trees$Tree;|3351
+25|aload|205874|org/apache/axis/client/Call.invoke([Ljava/lang/Object;)Ljava/lang/Object;|3123
+25|aload|2|java/lang/String.equalsIgnoreCase(Ljava/lang/String;)Z|3076
+25|aload|54241|scala/Some.x()Ljava/lang/Object;|2714
+25|aload|47023|scala/Tuple2.<init>(Ljava/lang/Object;Ljava/lang/Object;)V|2647
+25|aload|26|java/awt/TextArea.<init>(II)V|2576
+182|invokevirtual|5946|java/lang/reflect/InvocationTargetException.getCause()Ljava/lang/Throwable;|2520
+25|aload|5946|java/lang/reflect/InvocationTargetException.getCause()Ljava/lang/Throwable;|2499
+182|invokevirtual|2582|java/util/ArrayList.get(I)Ljava/lang/Object;|2395
+184|invokestatic|514894|org/eclipse/jetty/util/component/ContainerLifeCycle$Bean.access$000(Lorg/eclipse/jetty/util/component/ContainerLifeCycle$Bean;)Ljava/lang/Object;|2360
+182|invokevirtual|2019|java/util/concurrent/ExecutionException.getCause()Ljava/lang/Throwable;|2296
+25|aload|180297|akka/actor/FSM$Event.event()Ljava/lang/Object;|2175
+25|aload|1088903|org/codehaus/jackson/JsonNode.get(Ljava/lang/String;)Lorg/codehaus/jackson/JsonNode;|2170
+178|getstatic|||2156
+25|aload|339|java/lang/reflect/Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;|1990
+25|aload|11631|org/apache/derby/iapi/sql/dictionary/ReferencedKeyConstraintDescriptor.getForeignKeyConstraints(I)Lorg/apache/derby/iapi/sql/dictionary/ConstraintDescriptorList;|1987
+185|invokeinterface|759|HTTPClient/BufferedInputStream.markForSearch()V|1958
+25|aload|1202|java/io/PrintWriter.println(Ljava/lang/String;)V|1947
+25|aload|2365410|clojure/lang/RT.aget([Ljava/lang/Object;I)Ljava/lang/Object;|1942
+25|aload|2019|java/util/concurrent/ExecutionException.getCause()Ljava/lang/Throwable;|1926
+182|invokevirtual|47252|scala/collection/immutable/$colon$colon.head()Ljava/lang/Object;|1888
+25|aload|1101|java/util/HashMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;|1794
+25|aload|574|java/lang/Process.waitFor()I|1784
+25|aload|21812|org/codehaus/activemq/benchmark/Producer.start()V|1746
+25|aload|105|HTTPClient/HTTPConnection.removeModule(Ljava/lang/Class;)Z|1729
+184|invokestatic|294835|org/yaml/snakeyaml/emitter/Emitter.access$100(Lorg/yaml/snakeyaml/emitter/Emitter;)Lorg/yaml/snakeyaml/events/Event;|1710
+182|invokevirtual|62934|java/security/PrivilegedActionException.getCause()Ljava/lang/Throwable;|1700
+25|aload|486521|com/fasterxml/jackson/databind/util/TokenBuffer$Segment.get(I)Ljava/lang/Object;|1682
+25|aload|74138|scala/collection/mutable/HashMap.get(Ljava/lang/Object;)Lscala/Option;|1677
+182|invokevirtual|54241|scala/Some.x()Ljava/lang/Object;|1675
+185|invokeinterface|1327|java/lang/Integer.valueOf(I)Ljava/lang/Integer;|1670
+58|astore|||1656
+25|aload|2582|java/util/ArrayList.get(I)Ljava/lang/Object;|1615
+25|aload|33|java/awt/Component.repaint()V|1615
+25|aload|53|java/lang/Throwable.toString()Ljava/lang/String;|1605
+25|aload|243|java/util/BitSet.clear(I)V|1567
+25|aload|43623|com/sun/org/apache/xerces/internal/impl/dv/SecuritySupport.getSystemProperty(Ljava/lang/String;)Ljava/lang/String;|1491
+25|aload|882176|scala/reflect/internal/Trees$Apply.args()Lscala/collection/immutable/List;|1490
+182|invokevirtual|46724|java/lang/Throwable.getCause()Ljava/lang/Throwable;|1484
+25|aload|1123256|javax/servlet/jsp/JspFactory.releasePageContext(Ljavax/servlet/jsp/PageContext;)V|1452
+25|aload|854|java/util/Vector.get(I)Ljava/lang/Object;|1442
+182|invokevirtual|71838|scala/collection/immutable/$colon$colon.hd$1()Ljava/lang/Object;|1440
+25|aload|47055|scala/runtime/BoxesRunTime.unboxToInt(Ljava/lang/Object;)I|1405
+25|aload|4539|java/net/URL.openConnection()Ljava/net/URLConnection;|1392
+25|aload|47089|scala/collection/mutable/StringBuilder.toString()Ljava/lang/String;|1375
+182|invokevirtual|3188647|io/vertx/core/json/JsonObject.getValue(Ljava/lang/String;)Ljava/lang/Object;|1372
+25|aload|11703|org/apache/derby/iapi/sql/dictionary/GenericDescriptorList.add(Ljava/lang/Object;)Z|1350
+25|aload|486852|com/fasterxml/jackson/core/base/ParserMinimalBase.getEmbeddedObject()Ljava/lang/Object;|1344
+25|aload|46|HTTPClient/HTTPResponse.getText()Ljava/lang/String;|1303
+25|aload|47394|scala/Option.isEmpty()Z|1298
+25|aload|5563|net/sf/acegisecurity/intercept/method/MethodDefinitionMap.merge(Lnet/sf/acegisecurity/ConfigAttributeDefinition;Lnet/sf/acegisecurity/ConfigAttributeDefinition;)V|1282
+25|aload|366764|org/browsermob/proxy/jetty/jetty/servlet/AbstractSessionManager$SessionScavenger.sleep(J)V|1257
+182|invokevirtual|14769|org/apache/derby/impl/sql/compile/ResultColumn.getExpression()Lorg/apache/derby/impl/sql/compile/ValueNode;|1257
+25|aload|1234|java/awt/FileDialog.getFile()Ljava/lang/String;|1252
+182|invokevirtual|5302|java/lang/Exception.getCause()Ljava/lang/Throwable;|1240
+25|aload|47536|scala/util/Try$.apply(Lscala/Function0;)Lscala/util/Try;|1228
+25|aload|882177|scala/reflect/internal/Trees$Select.name()Lscala/reflect/internal/Names$Name;|1197
+25|aload|11218|java/security/PrivilegedActionException.getException()Ljava/lang/Exception;|1172
+182|invokevirtual|512812|org/eclipse/jetty/server/handler/HandlerWrapper.getHandler()Lorg/eclipse/jetty/server/Handler;|1155
+184|invokestatic|177|java/lang/Thread.currentThread()Ljava/lang/Thread;|1149
+25|aload|14|java/lang/StringBuffer.toString()Ljava/lang/String;|1138
+184|invokestatic|1409228|com/fasterxml/jackson/dataformat/yaml/snakeyaml/emitter/Emitter.access$100(Lcom/fasterxml/jackson/dataformat/yaml/snakeyaml/emitter/Emitter;)Lcom/fasterxml/jackson/dataformat/yaml/snakeyaml/events/Event;|1120

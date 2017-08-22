@@ -1,0 +1,6 @@
+
+select count(*) method_count
+from method
+;
+method_count
+222492323

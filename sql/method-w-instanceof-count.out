@@ -1,0 +1,10 @@
+
+select count(*) method_w_checkcast_count
+from (
+  select distinct methodid
+  from code
+  where opcode=(select id from opcode where name='instanceof')
+)
+;
+method_w_checkcast_count
+5267707

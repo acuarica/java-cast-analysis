@@ -1,0 +1,6 @@
+
+select count(*) class_count
+from class
+;
+class_count
+24109857

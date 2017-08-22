@@ -10,7 +10,12 @@ public class Cond {
     public static Number method2(boolean arg) {
         Object s = 4;
         Object t = 2.3;
-        return arg ? (Integer)s : (Float)t;
+        return arg ? (Integer)s : (Double)t;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(method1(true));
+        System.out.println(method2(false));
     }
 
 }

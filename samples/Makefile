@@ -1,22 +1,29 @@
 
+JAVA=java
+JAVAC=javac
+JAVAP=javap
+
 SRC=.
 BUILD=.
 
-JAVA=$(wildcard $(SRC)/*.java)
-CLASS=$(JAVA:$(SRC)/%.java=$(BUILD)/%.class)
-BYTECODE=$(CLASS:$(SRC)/%.class=$(BUILD)/%.bytecode)
+SRCS=$(wildcard $(SRC)/*.java)
+OBJS=$(SRCS:$(SRC)/%.java=$(BUILD)/%.class)
+ASMS=$(OBJS:$(BUILD)/%.class=$(BUILD)/%.bytecode)
+RUNS=$(OBJS:$(BUILD)/%.class=$(BUILD)/%.phonyrun)
 
 .PHONY: run compile disassembly
 
-run:
-	java Generics
+run: $(RUNS)
 
-compile: $(CLASS)
+compile: $(OBJS)
 
-disassembly: $(BYTECODE)
+disassembly: $(ASMS)
 
 %.class: %.java
-	javac $<
+	$(JAVAC) $<
 
 %.bytecode: %.class
-	javap -v $< > $@
+	$(JAVAP) -v $< > $@
+
+%.phonyrun: %.class
+	$(JAVA) $*

@@ -105,7 +105,6 @@ These stats were collected using the Maven Bytecode Dataset.
 | Number of classes                   | 24,109,857    |
 | Number of methods                   | 222,492,323   |
 | Number of bytecode instructions     | 4,421,391,470 |
-|-------------------------------------|---------------|
 | Number of `checkcast` instructions  | 47,622,853    |
 | Number of `instanceof` instructions | 8,411,639     |
 | Number of methods w/ `checkcast`    | 27,019,431    |

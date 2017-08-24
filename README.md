@@ -384,6 +384,12 @@ The database is built in another repo, *mavends*.
 
 ### Queries
 
+To retrieve the stats showed above,
+we have used SQL queries against the bytecode database.
+Each individual query is aimed to answer a precise question.
+The following list presents all the SQL queries used to retrieve the stats,
+and its respective answer (after the `;`).
+
 * [How many checkcast instructions?](sql/checkcast-count.out)
 * [`checkcast` most used arguments](sql/checkcast-most-used-args.out)
 * [`checkcast` most used targets](sql/checkcast-most-used-target.out)

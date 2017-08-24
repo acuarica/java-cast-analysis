@@ -109,7 +109,6 @@ These stats were collected using the Maven Bytecode Dataset.
 | Number of `instanceof` instructions | 8,411,639     |
 | Number of methods w/ `checkcast`    | 27,019,431    |
 | Number of methods w/ `instanceof`   | 5,267,707     |
-|                                     |               |
 
 Notice that around a 12% of methods contain a `checkcast` instruction.
 Which means that it is used a lot.

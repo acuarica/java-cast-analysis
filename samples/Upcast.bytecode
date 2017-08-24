@@ -1,28 +1,44 @@
 Classfile /Volumes/Data/work/java-cast-analysis/samples/Upcast.class
-  Last modified Aug 21, 2017; size 269 bytes
-  MD5 checksum 75726e0d337ac2f78dce700d089ba853
+  Last modified Aug 22, 2017; size 495 bytes
+  MD5 checksum cab3fd14842bd28f2c64af57758073cd
   Compiled from "Upcast.java"
 public class Upcast
   minor version: 0
   major version: 52
   flags: ACC_PUBLIC, ACC_SUPER
 Constant pool:
-   #1 = Methodref          #4.#13         // java/lang/Object."<init>":()V
-   #2 = String             #14            // Ciao
-   #3 = Class              #15            // Upcast
-   #4 = Class              #16            // java/lang/Object
-   #5 = Utf8               <init>
-   #6 = Utf8               ()V
-   #7 = Utf8               Code
-   #8 = Utf8               LineNumberTable
-   #9 = Utf8               method
-  #10 = Utf8               ()Ljava/lang/Object;
-  #11 = Utf8               SourceFile
-  #12 = Utf8               Upcast.java
-  #13 = NameAndType        #5:#6          // "<init>":()V
-  #14 = Utf8               Ciao
-  #15 = Utf8               Upcast
-  #16 = Utf8               java/lang/Object
+   #1 = Methodref          #7.#18         // java/lang/Object."<init>":()V
+   #2 = String             #19            // Ciao
+   #3 = Fieldref           #20.#21        // java/lang/System.out:Ljava/io/PrintStream;
+   #4 = Methodref          #6.#22         // Upcast.method1:()Ljava/lang/Object;
+   #5 = Methodref          #23.#24        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+   #6 = Class              #25            // Upcast
+   #7 = Class              #26            // java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               LineNumberTable
+  #12 = Utf8               method1
+  #13 = Utf8               ()Ljava/lang/Object;
+  #14 = Utf8               main
+  #15 = Utf8               ([Ljava/lang/String;)V
+  #16 = Utf8               SourceFile
+  #17 = Utf8               Upcast.java
+  #18 = NameAndType        #8:#9          // "<init>":()V
+  #19 = Utf8               Ciao
+  #20 = Class              #27            // java/lang/System
+  #21 = NameAndType        #28:#29        // out:Ljava/io/PrintStream;
+  #22 = NameAndType        #12:#13        // method1:()Ljava/lang/Object;
+  #23 = Class              #30            // java/io/PrintStream
+  #24 = NameAndType        #31:#32        // println:(Ljava/lang/Object;)V
+  #25 = Utf8               Upcast
+  #26 = Utf8               java/lang/Object
+  #27 = Utf8               java/lang/System
+  #28 = Utf8               out
+  #29 = Utf8               Ljava/io/PrintStream;
+  #30 = Utf8               java/io/PrintStream
+  #31 = Utf8               println
+  #32 = Utf8               (Ljava/lang/Object;)V
 {
   public Upcast();
     descriptor: ()V
@@ -35,14 +51,27 @@ Constant pool:
       LineNumberTable:
         line 2: 0
 
-  public java.lang.Object method();
+  public static java.lang.Object method1();
     descriptor: ()Ljava/lang/Object;
-    flags: ACC_PUBLIC
+    flags: ACC_PUBLIC, ACC_STATIC
     Code:
-      stack=1, locals=1, args_size=1
+      stack=1, locals=0, args_size=0
          0: ldc           #2                  // String Ciao
          2: areturn
       LineNumberTable:
         line 5: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #3                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: invokestatic  #4                  // Method method1:()Ljava/lang/Object;
+         6: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+         9: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 9
 }
 SourceFile: "Upcast.java"

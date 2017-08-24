@@ -1,61 +1,77 @@
 Classfile /Volumes/Data/work/java-cast-analysis/samples/Cond.class
-  Last modified Aug 21, 2017; size 746 bytes
-  MD5 checksum 67d1ce620f720303dd6fe294d8835f08
+  Last modified Aug 22, 2017; size 977 bytes
+  MD5 checksum 386b4784ec3c748f223d842d8b097cf4
   Compiled from "Cond.java"
 public class Cond
   minor version: 0
   major version: 52
   flags: ACC_PUBLIC, ACC_SUPER
 Constant pool:
-   #1 = Methodref          #15.#28        // java/lang/Object."<init>":()V
-   #2 = String             #29            // Ciao
-   #3 = String             #30            // Hola
-   #4 = Class              #31            // java/lang/String
-   #5 = Methodref          #9.#32         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #1 = Methodref          #19.#34        // java/lang/Object."<init>":()V
+   #2 = String             #35            // Ciao
+   #3 = String             #36            // Hola
+   #4 = Class              #37            // java/lang/String
+   #5 = Methodref          #9.#38         // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
    #6 = Double             2.3d
-   #8 = Methodref          #33.#34        // java/lang/Double.valueOf:(D)Ljava/lang/Double;
-   #9 = Class              #35            // java/lang/Integer
-  #10 = Methodref          #9.#36         // java/lang/Integer.intValue:()I
-  #11 = Class              #37            // java/lang/Float
-  #12 = Methodref          #11.#38        // java/lang/Float.floatValue:()F
-  #13 = Methodref          #11.#39        // java/lang/Float.valueOf:(F)Ljava/lang/Float;
-  #14 = Class              #40            // Cond
-  #15 = Class              #41            // java/lang/Object
-  #16 = Utf8               <init>
-  #17 = Utf8               ()V
-  #18 = Utf8               Code
-  #19 = Utf8               LineNumberTable
-  #20 = Utf8               method1
-  #21 = Utf8               (Z)Ljava/lang/String;
-  #22 = Utf8               StackMapTable
-  #23 = Class              #41            // java/lang/Object
-  #24 = Utf8               method2
-  #25 = Utf8               (Z)Ljava/lang/Number;
-  #26 = Utf8               SourceFile
-  #27 = Utf8               Cond.java
-  #28 = NameAndType        #16:#17        // "<init>":()V
-  #29 = Utf8               Ciao
-  #30 = Utf8               Hola
-  #31 = Utf8               java/lang/String
-  #32 = NameAndType        #42:#43        // valueOf:(I)Ljava/lang/Integer;
-  #33 = Class              #44            // java/lang/Double
-  #34 = NameAndType        #42:#45        // valueOf:(D)Ljava/lang/Double;
-  #35 = Utf8               java/lang/Integer
-  #36 = NameAndType        #46:#47        // intValue:()I
-  #37 = Utf8               java/lang/Float
-  #38 = NameAndType        #48:#49        // floatValue:()F
-  #39 = NameAndType        #42:#50        // valueOf:(F)Ljava/lang/Float;
-  #40 = Utf8               Cond
-  #41 = Utf8               java/lang/Object
-  #42 = Utf8               valueOf
-  #43 = Utf8               (I)Ljava/lang/Integer;
-  #44 = Utf8               java/lang/Double
-  #45 = Utf8               (D)Ljava/lang/Double;
-  #46 = Utf8               intValue
-  #47 = Utf8               ()I
-  #48 = Utf8               floatValue
-  #49 = Utf8               ()F
-  #50 = Utf8               (F)Ljava/lang/Float;
+   #8 = Methodref          #11.#39        // java/lang/Double.valueOf:(D)Ljava/lang/Double;
+   #9 = Class              #40            // java/lang/Integer
+  #10 = Methodref          #9.#41         // java/lang/Integer.intValue:()I
+  #11 = Class              #42            // java/lang/Double
+  #12 = Methodref          #11.#43        // java/lang/Double.doubleValue:()D
+  #13 = Fieldref           #44.#45        // java/lang/System.out:Ljava/io/PrintStream;
+  #14 = Methodref          #18.#46        // Cond.method1:(Z)Ljava/lang/String;
+  #15 = Methodref          #47.#48        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #16 = Methodref          #18.#49        // Cond.method2:(Z)Ljava/lang/Number;
+  #17 = Methodref          #47.#50        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #18 = Class              #51            // Cond
+  #19 = Class              #52            // java/lang/Object
+  #20 = Utf8               <init>
+  #21 = Utf8               ()V
+  #22 = Utf8               Code
+  #23 = Utf8               LineNumberTable
+  #24 = Utf8               method1
+  #25 = Utf8               (Z)Ljava/lang/String;
+  #26 = Utf8               StackMapTable
+  #27 = Class              #52            // java/lang/Object
+  #28 = Utf8               method2
+  #29 = Utf8               (Z)Ljava/lang/Number;
+  #30 = Utf8               main
+  #31 = Utf8               ([Ljava/lang/String;)V
+  #32 = Utf8               SourceFile
+  #33 = Utf8               Cond.java
+  #34 = NameAndType        #20:#21        // "<init>":()V
+  #35 = Utf8               Ciao
+  #36 = Utf8               Hola
+  #37 = Utf8               java/lang/String
+  #38 = NameAndType        #53:#54        // valueOf:(I)Ljava/lang/Integer;
+  #39 = NameAndType        #53:#55        // valueOf:(D)Ljava/lang/Double;
+  #40 = Utf8               java/lang/Integer
+  #41 = NameAndType        #56:#57        // intValue:()I
+  #42 = Utf8               java/lang/Double
+  #43 = NameAndType        #58:#59        // doubleValue:()D
+  #44 = Class              #60            // java/lang/System
+  #45 = NameAndType        #61:#62        // out:Ljava/io/PrintStream;
+  #46 = NameAndType        #24:#25        // method1:(Z)Ljava/lang/String;
+  #47 = Class              #63            // java/io/PrintStream
+  #48 = NameAndType        #64:#65        // println:(Ljava/lang/String;)V
+  #49 = NameAndType        #28:#29        // method2:(Z)Ljava/lang/Number;
+  #50 = NameAndType        #64:#66        // println:(Ljava/lang/Object;)V
+  #51 = Utf8               Cond
+  #52 = Utf8               java/lang/Object
+  #53 = Utf8               valueOf
+  #54 = Utf8               (I)Ljava/lang/Integer;
+  #55 = Utf8               (D)Ljava/lang/Double;
+  #56 = Utf8               intValue
+  #57 = Utf8               ()I
+  #58 = Utf8               doubleValue
+  #59 = Utf8               ()D
+  #60 = Utf8               java/lang/System
+  #61 = Utf8               out
+  #62 = Utf8               Ljava/io/PrintStream;
+  #63 = Utf8               java/io/PrintStream
+  #64 = Utf8               println
+  #65 = Utf8               (Ljava/lang/String;)V
+  #66 = Utf8               (Ljava/lang/Object;)V
 {
   public Cond();
     descriptor: ()V
@@ -112,12 +128,12 @@ Constant pool:
         16: aload_1
         17: checkcast     #9                  // class java/lang/Integer
         20: invokevirtual #10                 // Method java/lang/Integer.intValue:()I
-        23: i2f
+        23: i2d
         24: goto          34
         27: aload_2
-        28: checkcast     #11                 // class java/lang/Float
-        31: invokevirtual #12                 // Method java/lang/Float.floatValue:()F
-        34: invokestatic  #13                 // Method java/lang/Float.valueOf:(F)Ljava/lang/Float;
+        28: checkcast     #11                 // class java/lang/Double
+        31: invokevirtual #12                 // Method java/lang/Double.doubleValue:()D
+        34: invokestatic  #8                  // Method java/lang/Double.valueOf:(D)Ljava/lang/Double;
         37: areturn
       LineNumberTable:
         line 11: 0
@@ -128,6 +144,25 @@ Constant pool:
           offset_delta = 27
           locals = [ class java/lang/Object, class java/lang/Object ]
         frame_type = 70 /* same_locals_1_stack_item */
-          stack = [ float ]
+          stack = [ double ]
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #13                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: iconst_1
+         4: invokestatic  #14                 // Method method1:(Z)Ljava/lang/String;
+         7: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        10: getstatic     #13                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        13: iconst_0
+        14: invokestatic  #16                 // Method method2:(Z)Ljava/lang/Number;
+        17: invokevirtual #17                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        20: return
+      LineNumberTable:
+        line 17: 0
+        line 18: 10
+        line 19: 20
 }
 SourceFile: "Cond.java"

@@ -413,8 +413,8 @@ and its respective answer (after the `;`).
 Now the following problem comes: How to extract code patterns?
 The database itself is not enough, and it faces scalability problems.
 
-The idea would be to use method slicing, both backward and forward.
-In this way we can see how the casting are being used.
+**The idea would be to use method slicing, both backward and forward.
+In this way we can see how the casting are being used.**
 
 After the slicing, we could implement some sort of method equivalence to detect
 different patterns.

@@ -382,6 +382,10 @@ The database is built in another repo, *mavends*.
 
 [https://bitbucket.org/acuarica/jnif]
 
+### Queries
+
+[sql/jar-count.out]
+
 ## Complex Analysis
 
 Now the following problem comes: How to extract code patterns?

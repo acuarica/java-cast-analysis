@@ -182,58 +182,58 @@ The following table shows which are the most used classes that are being casted 
 
 Same as target class for `checkcast`.
 
-|   CN id | Class Name                                  |  Count |
-|---------|---------------------------------------------|--------|
-|       3 | java/lang/String                            | 370467 |
-|   11482 | scala/Some                                  | 159547 |
-|   11592 | scala/collection/immutable/$colon$colon     | 132527 |
-|    2179 | java/lang/Number                            | 104804 |
-|     759 | java/util/Map$Entry                         | 103969 |
-|      46 | java/lang/Class                             |  90992 |
-|     243 | java/util/List                              |  71285 |
-|      69 | java/lang/Character                         |  68864 |
-|      33 | java/lang/Integer                           |  67169 |
-|    1234 | java/util/Collection                        |  65349 |
-|     165 | java/lang/RuntimeException                  |  63283 |
-|     574 | java/util/Map                               |  56721 |
-|      47 | java/lang/Boolean                           |  54042 |
-|      53 | java/lang/Long                              |  53438 |
-|    1101 | java/lang/Double                            |  50870 |
-|    5566 | java/lang/reflect/ParameterizedType         |  49994 |
-|     162 | [B                                          |  42157 |
-|     105 | java/lang/Float                             |  41424 |
-|      58 | java/lang/Error                             |  31794 |
-|      32 | java/io/IOException                         |  28602 |
-|    5581 | java/lang/reflect/TypeVariable              |  28414 |
-|    1100 | java/lang/Short                             |  28129 |
-|    1839 | java/lang/Byte                              |  26136 |
-|    5563 | java/lang/reflect/GenericArrayType          |  25962 |
-|    1271 | java/util/Set                               |  25881 |
-|    5580 | java/lang/reflect/WildcardType              |  25745 |
-|     193 | [Ljava/lang/Object;                         |  23725 |
-|   18350 | scala/util/Left                             |  19422 |
-|   18351 | scala/util/Right                            |  19226 |
-|    2201 | java/math/BigDecimal                        |  19145 |
-|      38 | java/util/Date                              |  17207 |
-|   21799 | antlr/LexerGrammar                          |  16365 |
-|    3243 | [C                                          |  15666 |
-|    3193 | java/math/BigInteger                        |  15145 |
-|     222 | java/lang/reflect/InvocationTargetException |  14750 |
-|   14919 | java/util/RandomAccess                      |  14685 |
-| 5374112 | org/omg/CORBA/portable/ServantObjectExt     |  13500 |
-|     216 | [I                                          |  13119 |
-|    5321 | org/w3c/dom/Element                         |  12503 |
-|      72 | java/lang/Exception                         |  12429 |
-|  229914 | scala/reflect/internal/Trees$Select         |  12380 |
-|    5755 | [D                                          |  12359 |
-|   24855 | java/util/SortedSet                         |  12352 |
-|    5758 | [F                                          |  12243 |
-|       2 | java/lang/Object                            |  12150 |
-|    3541 | [J                                          |  12114 |
-|   21803 | antlr/TreeWalkerGrammar                     |  11974 |
-|    3359 | [S                                          |  11919 |
-|      94 | java/lang/reflect/Method                    |  11711 |
-|    3160 | [Z                                          |  11406 |
+| Class Name                                  |  Count |
+|---------------------------------------------|--------|
+| java/lang/String                            | 370467 |
+| scala/Some                                  | 159547 |
+| scala/collection/immutable/$colon$colon     | 132527 |
+| java/lang/Number                            | 104804 |
+| java/util/Map$Entry                         | 103969 |
+| java/lang/Class                             |  90992 |
+| java/util/List                              |  71285 |
+| java/lang/Character                         |  68864 |
+| java/lang/Integer                           |  67169 |
+| java/util/Collection                        |  65349 |
+| java/lang/RuntimeException                  |  63283 |
+| java/util/Map                               |  56721 |
+| java/lang/Boolean                           |  54042 |
+| java/lang/Long                              |  53438 |
+| java/lang/Double                            |  50870 |
+| java/lang/reflect/ParameterizedType         |  49994 |
+| [B                                          |  42157 |
+| java/lang/Float                             |  41424 |
+| java/lang/Error                             |  31794 |
+| java/io/IOException                         |  28602 |
+| java/lang/reflect/TypeVariable              |  28414 |
+| java/lang/Short                             |  28129 |
+| java/lang/Byte                              |  26136 |
+| java/lang/reflect/GenericArrayType          |  25962 |
+| java/util/Set                               |  25881 |
+| java/lang/reflect/WildcardType              |  25745 |
+| [Ljava/lang/Object;                         |  23725 |
+| scala/util/Left                             |  19422 |
+| scala/util/Right                            |  19226 |
+| java/math/BigDecimal                        |  19145 |
+| java/util/Date                              |  17207 |
+| antlr/LexerGrammar                          |  16365 |
+| [C                                          |  15666 |
+| java/math/BigInteger                        |  15145 |
+| java/lang/reflect/InvocationTargetException |  14750 |
+| java/util/RandomAccess                      |  14685 |
+| org/omg/CORBA/portable/ServantObjectExt     |  13500 |
+| [I                                          |  13119 |
+| org/w3c/dom/Element                         |  12503 |
+| java/lang/Exception                         |  12429 |
+| scala/reflect/internal/Trees$Select         |  12380 |
+| [D                                          |  12359 |
+| java/util/SortedSet                         |  12352 |
+| [F                                          |  12243 |
+| java/lang/Object                            |  12150 |
+| [J                                          |  12114 |
+| antlr/TreeWalkerGrammar                     |  11974 |
+| [S                                          |  11919 |
+| java/lang/reflect/Method                    |  11711 |
+| [Z                                          |  11406 |
 
 Notice the rank of `java.lang.Number`, and how it is not present in `checkcast`.
 

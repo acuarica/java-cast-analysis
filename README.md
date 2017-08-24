@@ -393,9 +393,9 @@ to extract every bytecode into a database.
 
 The database is built in another repo, *mavends*.
 
-[https://bitbucket.org/acuarica/mavends]
+[MavenDS](https://bitbucket.org/acuarica/mavends)
 
-[https://bitbucket.org/acuarica/jnif]
+[JNIF](https://bitbucket.org/acuarica/jnif)
 
 ### Queries
 

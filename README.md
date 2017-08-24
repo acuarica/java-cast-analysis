@@ -384,7 +384,7 @@ The database is built in another repo, *mavends*.
 
 ### Queries
 
-[sql/jar-count.out]
+[jar count](sql/jar-count.out)
 
 ## Complex Analysis
 

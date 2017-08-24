@@ -16,6 +16,21 @@ For the bytecode analysis,
 we need to take into consideration certain code is being compiled.
 This is why we need to take the following preliminary considerations.
 
+### Simple cast
+
+```java
+Object o = "Ciao";
+return (String)o;
+```
+
+```
+0: ldc           #2                  // String Ciao
+2: astore_0
+3: aload_0
+4: checkcast     #3                  // class java/lang/String
+7: areturn
+```
+
 ### Generics vs. Non-generics
 
 The following two Java snippets get compiled to the same bytecode instructions

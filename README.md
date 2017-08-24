@@ -384,7 +384,23 @@ The database is built in another repo, *mavends*.
 
 ### Queries
 
-[jar count](sql/jar-count.out)
+* [How many checkcast instructions?](sql/checkcast-count.out)
+* [`checkcast` most used arguments](sql/checkcast-most-used-args.out)
+* [`checkcast` most used targets](sql/checkcast-most-used-target.out)
+* [How many classes?](sql/class-count.out)
+* [How many bytecode instructions?](sql/code-count.out)
+* [How many `equals` methods?](sql/equals-method-count.out)
+* [How many `equals` methods with `checkcast`?](sql/equals-method-w-checkcast-count.out)
+* [How many `equals` methods with `instanceof`?](sql/equals-method-w-instanceof-count.out)
+* [How many `instanceof` instructions?](sql/instanceof-count.out)
+* [`instanceof` most used arguments](sql/instanceof-most-used-args.out)
+* [`instanceof` most used targets](sql/instanceof-most-used-target.out)
+* [How many `.jar` files?](sql/jar-count.out)
+* [How many `.jar` files with classes?](sql/jar-w-classes-count.out)
+* [How many methods?](sql/method-count.out)
+* [How many methods with `checkcast` instruction?](sql/method-w-checkcast-count.out)
+* [How many methods with `instanceof` instruction?](sql/method-w-instanceof-count.out)
+* [How many methods with signature?](sql/methods-w-signature.out)
 
 ## Complex Analysis
 

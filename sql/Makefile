@@ -1,8 +1,8 @@
 
 SQLITE3=sqlite3
 
-DB=~/work/mavends/out/mavenclass-last.sqlite3
-SQLITE_FLAGS=-header -echo
+DB=~/work/mavends/out/mavenclass-all-last.sqlite3
+SQLITE_FLAGS=-bail -header -echo
 
 SRC=.
 BUILD=.

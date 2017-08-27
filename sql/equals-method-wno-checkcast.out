@@ -1,0 +1,139 @@
+
+-- with m as (select * from method ),
+-- c as (select * from code )
+
+-- select
+  -- t.methodid --,
+  -- s.methodname,
+ -- (select methoddesc from cp_methoddesc where methoddescid=s.methoddescid)methodesc,
+  -- s.classid,
+  -- cv.classnameid,
+  -- cn.classname,
+  -- j.coord
+-- from (
+select m.methodid, m.methodname,
+(select methoddesc from cp_methoddesc where methoddescid=m.methoddescid)methodesc,
+  cn.classname, j.coord
+  from method m
+  left join code c on c.methodid = m.methodid
+  left join class cv on cv.classid = m.classid
+  left join cp_classname cn on cn.classnameid = cv.classnameid
+  left join jar j on j.jarid = cv.jarid
+  where
+    m.methodname='equals' and
+    m.methoddescid=(
+      select methoddescid
+      from cp_methoddesc
+      where methoddesc ='(Ljava/lang/Object;)Z'
+    )
+  group by m.methodid
+  having sum(c.opcode=(select id from opcode where name='checkcast')) = 0
+  limit 100
+-- ) t
+-- left join method s on s.methodid = t.methodid
+-- left join class cv on cv.classid = s.classid
+-- left join cp_classname cn on cn.classnameid = cv.classnameid
+-- left join jar j on j.jarid = cv.jarid
+
+;
+methodid|methodname|methodesc|classname|coord
+1218|equals|(Ljava/lang/Object;)Z|abbot/tester/FileComparator|abbot:abbot@1.4.0.jar
+1250|equals|(Ljava/lang/Object;)Z|abbot/tester/ImageComparator|abbot:abbot@1.4.0.jar
+4209|equals|(Ljava/lang/Object;)Z|abbot/script/Call$2|abbot:costello@1.4.0.jar
+12961|equals|(Ljava/lang/Object;)Z|org/activemq/ActiveMQQueueSession|activemq:activemq@3.2.4.jar
+13106|equals|(Ljava/lang/Object;)Z|org/activemq/ActiveMQTopicSession|activemq:activemq@3.2.4.jar
+13866|equals|(Ljava/lang/Object;)Z|org/activemq/filter/BinaryExpression|activemq:activemq@3.2.4.jar
+13927|equals|(Ljava/lang/Object;)Z|org/activemq/filter/ConstantExpression|activemq:activemq@3.2.4.jar
+14054|equals|(Ljava/lang/Object;)Z|org/activemq/filter/UnaryExpression|activemq:activemq@3.2.4.jar
+21371|equals|(Ljava/lang/Object;)Z|org/apache/derby/iapi/sql/dictionary/IndexRowGenerator|activemq:activemq@3.2.4.jar
+22679|equals|(Ljava/lang/Object;)Z|org/apache/derby/iapi/types/DataTypeDescriptor|activemq:activemq@3.2.4.jar
+36935|equals|(Ljava/lang/Object;)Z|org/activemq/ActiveMQQueueSession|activemq:activemq-core@3.2.4.jar
+37080|equals|(Ljava/lang/Object;)Z|org/activemq/ActiveMQTopicSession|activemq:activemq-core@3.2.4.jar
+37779|equals|(Ljava/lang/Object;)Z|org/activemq/filter/BinaryExpression|activemq:activemq-core@3.2.4.jar
+37840|equals|(Ljava/lang/Object;)Z|org/activemq/filter/ConstantExpression|activemq:activemq-core@3.2.4.jar
+37967|equals|(Ljava/lang/Object;)Z|org/activemq/filter/UnaryExpression|activemq:activemq-core@3.2.4.jar
+66695|equals|(Ljava/lang/Object;)Z|com/sun/tools/xjc/reader/xmlschema/parser/VersionNumber|activemq:jaxb-xjc@20050407.jar
+73987|equals|(Ljava/lang/Object;)Z|org/kohsuke/rngom/nc/AnyNameClass|activemq:jaxb-xjc@20050407.jar
+74081|equals|(Ljava/lang/Object;)Z|org/kohsuke/rngom/nc/NullNameClass|activemq:jaxb-xjc@20050407.jar
+81469|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/ElementExp|activesoap:jaxb-libs@1.5.jar
+81500|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/Expression$AnyStringExpression|activesoap:jaxb-libs@1.5.jar
+81509|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/Expression$EpsilonExpression|activesoap:jaxb-libs@1.5.jar
+81518|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/Expression$NullSetExpression|activesoap:jaxb-libs@1.5.jar
+81697|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/OtherExp|activesoap:jaxb-libs@1.5.jar
+81715|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/ReferenceExp|activesoap:jaxb-libs@1.5.jar
+81762|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/relax/ElementRules|activesoap:jaxb-libs@1.5.jar
+81780|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/relax/HedgeRules|activesoap:jaxb-libs@1.5.jar
+90922|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xalan/internal/xsltc/compiler/FunctionCall$JavaType|activesoap:jaxb-xalan@1.5.jar
+91286|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xalan/internal/xsltc/compiler/QName|activesoap:jaxb-xalan@1.5.jar
+92123|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xalan/internal/xsltc/compiler/util/ObjectType|activesoap:jaxb-xalan@1.5.jar
+96724|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xml/internal/utils/XMLStringDefault|activesoap:jaxb-xalan@1.5.jar
+96822|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xpath/internal/Arg|activesoap:jaxb-xalan@1.5.jar
+98262|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xpath/internal/objects/XString|activesoap:jaxb-xalan@1.5.jar
+98315|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xpath/internal/objects/XStringForFSB|activesoap:jaxb-xalan@1.5.jar
+103379|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xerces/internal/impl/xs/XSElementDecl|activesoap:jaxb-xercesImpl@1.5.jar
+109779|equals|(Ljava/lang/Object;)Z|com/sun/tools/xjc/reader/xmlschema/parser/VersionNumber|activesoap:jaxb-xjc@1.5.jar
+112452|equals|(Ljava/lang/Object;)Z|com/sun/xml/bind/util/ProxyListImpl|activesoap:jaxb1-impl@20050407.jar
+113109|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/ElementExp|activesoap:jaxb1-impl@20050407.jar
+113122|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/Expression$AnyStringExpression|activesoap:jaxb1-impl@20050407.jar
+113131|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/Expression$EpsilonExpression|activesoap:jaxb1-impl@20050407.jar
+113140|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/Expression$NullSetExpression|activesoap:jaxb1-impl@20050407.jar
+113338|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/OtherExp|activesoap:jaxb1-impl@20050407.jar
+113357|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/ReferenceExp|activesoap:jaxb1-impl@20050407.jar
+113402|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/relax/ElementRules|activesoap:jaxb1-impl@20050407.jar
+113422|equals|(Ljava/lang/Object;)Z|com/sun/msv/grammar/relax/HedgeRules|activesoap:jaxb1-impl@20050407.jar
+116928|equals|(Ljava/lang/Object;)Z|com/rc/retroweaver/runtime/Enum_|activesoap:retroweaver@1.1.jar
+116958|equals|(Ljava/lang/Object;)Z|com/rc/retroweaver/runtime/Enum_|activesoap:retroweaver-rt@1.1.jar
+121738|equals|(Ljava/lang/Object;)Z|com/sun/org/apache/xerces/internal/impl/xs/XSElementDecl|activesoap:xercesImpl@1.5.jar
+126047|equals|(Ljava/lang/Object;)Z|ri/cache/TieredCache|activespace:jcache@1.0-dev-3.jar
+146471|equals|(Ljava/lang/Object;)Z|ai/grakn/graql/internal/pattern/property/IsAbstractProperty|ai.grakn:grakn-graql@0.13.0.jar
+146793|equals|(Ljava/lang/Object;)Z|ai/grakn/graql/internal/query/aggregate/CountAggregate|ai.grakn:grakn-graql@0.13.0.jar
+146806|equals|(Ljava/lang/Object;)Z|ai/grakn/graql/internal/query/aggregate/ListAggregate|ai.grakn:grakn-graql@0.13.0.jar
+147294|equals|(Ljava/lang/Object;)Z|ai/grakn/graql/internal/query/predicate/EqPredicate|ai.grakn:grakn-graql@0.13.0.jar
+147700|equals|(Ljava/lang/Object;)Z|ai/grakn/graql/internal/reasoner/atom/property/IsAbstractAtom|ai.grakn:grakn-graql@0.13.0.jar
+147896|equals|(Ljava/lang/Object;)Z|ai/grakn/graql/internal/reasoner/query/ReasonerAtomicQuery|ai.grakn:grakn-graql@0.13.0.jar
+151666|equals|(Ljava/lang/Object;)Z|dontweave/gson/JsonNull|ai.h2o:h2o-classic@2.8.jar
+167450|equals|(Ljava/lang/Object;)Z|water/util/IcedHashMap|ai.h2o:h2o-core@0.1.25.jar
+168111|equals|(Ljava/lang/Object;)Z|org/reflections/scanners/AbstractScanner|ai.h2o:reflections@0.9.11-h2o-custom.jar
+173462|equals|(Ljava/lang/Object;)Z|org/apache/spark/h2o/backends/internal/PartitionWithNodeInfo|ai.h2o:sparkling-water-core_2.11@2.0.10.jar
+174329|equals|(Ljava/lang/Object;)Z|org/apache/spark/h2o/converters/H2ORDDLike$$anonfun$getPartitions$1$$anon$1|ai.h2o:sparkling-water-core_2.11@2.0.10.jar
+180646|equals|(Ljava/lang/Object;)Z|ai/lum/common/JavaCollectionUtils$JavaMapWrapper|ai.lum:common_2.11@0.0.7.jar
+180700|equals|(Ljava/lang/Object;)Z|ai/lum/common/RandomUtils$RandomWrapper|ai.lum:common_2.11@0.0.7.jar
+180728|equals|(Ljava/lang/Object;)Z|ai/lum/common/ConfigUtils$ConfigWrapper|ai.lum:common_2.11@0.0.7.jar
+180864|equals|(Ljava/lang/Object;)Z|ai/lum/common/IteratorUtils$IteratorWrapper|ai.lum:common_2.11@0.0.7.jar
+181048|equals|(Ljava/lang/Object;)Z|ai/lum/common/StringUtils$StringWrapper|ai.lum:common_2.11@0.0.7.jar
+181080|equals|(Ljava/lang/Object;)Z|ai/lum/common/FileUtils$FileWrapper|ai.lum:common_2.11@0.0.7.jar
+181259|equals|(Ljava/lang/Object;)Z|ai/lum/common/JavaCollectionUtils$JavaCollectionOps|ai.lum:common_2.11@0.0.7.jar
+183245|equals|(Ljava/lang/Object;)Z|ai/x/lens/BoundLens|ai.x:lens_2.11@1.0.0.jar
+183702|equals|(Ljava/lang/Object;)Z|ai/x/play/json/internals/package$TraversableLikeExtensions|ai.x:play-json-extensions_2.11@0.8.0.jar
+183907|equals|(Ljava/lang/Object;)Z|ai/x/play/json/OptionValidationDispatcher|ai.x:play-json-extensions_2.11@0.8.0.jar
+203125|equals|(Ljava/lang/Object;)Z|net/sf/antcontrib/logic/ProjectDelegate|ant-contrib:ant-contrib@1.0b3.jar
+212900|equals|(Ljava/lang/Object;)Z|org/antlr/stringtemplate/test/TestStringTemplate$ErrorBuffer|antlr:stringtemplate@2.3b6.jar
+216500|equals|(Ljava/lang/Object;)Z|org/apache/ws/jaxme/js/JavaQNameImpl$DefaultImpl|apache-jaxme:jaxmejs-incubation@0.2.jar
+216793|equals|(Ljava/lang/Object;)Z|org/apache/ws/jaxme/js/pattern/ProxyGenerator$GeneratedMethod|apache-jaxme:jaxmejs-incubation@0.2.jar
+217449|equals|(Ljava/lang/Object;)Z|org/apache/ws/jaxme/sqls/impl/ColumnImpl$NameImpl|apache-jaxme:jaxmejs-incubation@0.2.jar
+217538|equals|(Ljava/lang/Object;)Z|org/apache/ws/jaxme/sqls/impl/SchemaImpl$NameImpl|apache-jaxme:jaxmejs-incubation@0.2.jar
+225498|equals|(Ljava/lang/Object;)Z|ar/com/asanteit/bundler/shaded/org/apache/commons/beanutils/locale/LocaleConvertUtilsBean$DelegateFastHashMap|ar.com.asanteit:bundler@0.1.0.jar
+225718|equals|(Ljava/lang/Object;)Z|ar/com/asanteit/bundler/shaded/org/apache/commons/beanutils/WeakFastHashMap$CollectionView|ar.com.asanteit:bundler@0.1.0.jar
+225784|equals|(Ljava/lang/Object;)Z|ar/com/asanteit/bundler/shaded/org/apache/commons/beanutils/WrapDynaClass$2|ar.com.asanteit:bundler@0.1.0.jar
+225841|equals|(Ljava/lang/Object;)Z|ar/com/asanteit/bundler/shaded/org/apache/commons/collections/FastHashMap$CollectionView|ar.com.asanteit:bundler@0.1.0.jar
+226288|equals|(Ljava/lang/Object;)Z|ar/com/asanteit/bundler/shaded/de/odysseus/el/misc/TypeConverterImpl|ar.com.asanteit:bundler@0.1.0.jar
+226456|equals|(Ljava/lang/Object;)Z|ar/com/asanteit/bundler/shaded/de/odysseus/el/tree/impl/ast/AstIdentifier$1|ar.com.asanteit:bundler@0.1.0.jar
+227609|equals|(Ljava/lang/Object;)Z|ar/com/fdvs/dj/core/FieldMapWrapper|ar.com.fdvs:DynamicJasper@5.0.0.jar
+227795|equals|(Ljava/lang/Object;)Z|ar/com/fdvs/dj/core/ParameterMapWrapper|ar.com.fdvs:DynamicJasper@5.0.0.jar
+227858|equals|(Ljava/lang/Object;)Z|ar/com/fdvs/dj/core/VariableMapWrapper|ar.com.fdvs:DynamicJasper@5.0.0.jar
+232438|equals|(Ljava/lang/Object;)Z|as/leap/las/sdk/ObjectId|as.leap:sdk-data-api@3.0.1.jar
+233956|equals|(Ljava/lang/Object;)Z|asia/redact/bracket/properties/json/JsonValue|asia.redact.bracket.properties:bracket-properties@2.1.0.jar
+234803|equals|(Ljava/lang/Object;)Z|asia/stampy/common/gateway/HostPort|asia.stampy:stampy-all@1.0-RELEASE.jar
+234878|equals|(Ljava/lang/Object;)Z|asia/stampy/common/message/AbstractMessage|asia.stampy:stampy-all@1.0-RELEASE.jar
+234890|equals|(Ljava/lang/Object;)Z|asia/stampy/common/message/AbstractMessageHeader|asia.stampy:stampy-all@1.0-RELEASE.jar
+235575|equals|(Ljava/lang/Object;)Z|asia/stampy/common/gateway/HostPort|asia.stampy:stampy-client-server@1.0-RELEASE.jar
+235903|equals|(Ljava/lang/Object;)Z|asia/stampy/common/message/AbstractMessage|asia.stampy:stampy-core@1.0-RELEASE.jar
+235915|equals|(Ljava/lang/Object;)Z|asia/stampy/common/message/AbstractMessageHeader|asia.stampy:stampy-core@1.0-RELEASE.jar
+250026|equals|(Ljava/lang/Object;)Z|org/aspectj/ajde/ui/BuildConfigNode$Kind|aspectj:aspectj-tools@1.0.6.jar
+255093|equals|(Ljava/lang/Object;)Z|org/aspectj/ajde/ui/BuildConfigNode$Kind|aspectj:aspectjtools@1.5.3.jar
+263765|equals|(Ljava/lang/Object;)Z|org/aspectj/weaver/ResolvedType|aspectj:aspectjtools@1.5.3.jar
+265754|equals|(Ljava/lang/Object;)Z|org/aspectj/weaver/patterns/AnyTypePattern|aspectj:aspectjtools@1.5.3.jar
+266040|equals|(Ljava/lang/Object;)Z|org/aspectj/weaver/patterns/EllipsisTypePattern|aspectj:aspectjtools@1.5.3.jar
+266332|equals|(Ljava/lang/Object;)Z|org/aspectj/weaver/patterns/NoTypePattern|aspectj:aspectjtools@1.5.3.jar
+269738|equals|(Ljava/lang/Object;)Z|org/aspectj/org/eclipse/jdt/core/dom/ASTNode|aspectj:aspectjtools@1.5.3.jar
+280197|equals|(Ljava/lang/Object;)Z|org/aspectj/org/eclipse/jdt/internal/core/BinaryField|aspectj:aspectjtools@1.5.3.jar

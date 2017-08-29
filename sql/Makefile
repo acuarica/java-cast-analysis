@@ -1,16 +1,9 @@
 
-SQLITE3=sqlite3
+include ../Makefile.local
 
-DB=~/work/mavends/out/mavenclass-all-last.sqlite3
-SQLITE_FLAGS=-bail -header -echo
+OUTS=$(patsubst %.sql,%.out,$(wildcard *.sql))
 
-SRC=.
-BUILD=.
-
-SQLS=$(wildcard $(SRC)/*.sql)
-OUTS=$(SQLS:$(SRC)/%.sql=$(BUILD)/%.out)
-
-execallqueries: $(OUTS)
+all: $(OUTS)
 
 %.out: %.sql
-	cat $< | $(SQLITE3) $(SQLITE_FLAGS) $(DB) > $@
+	cat $< | $(SQLITE) $(SQLITE_FLAGS) $(MAVENCLASS_DB) > $@

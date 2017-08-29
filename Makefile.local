@@ -1,0 +1,5 @@
+
+SQLITE=sqlite3
+
+MAVENCLASS_DB=$(HOME)/work/mavends/out/mavenclass-all-last.sqlite3
+SQLITE_FLAGS=-bail -header -echo

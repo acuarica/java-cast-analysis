@@ -12,7 +12,7 @@ insert into mat_method_cast (methodid, bytecodec, checkcastc, instanceofc)
 select
   c.methodid,
   count(*) as bytecodec,
-  sum(c.opcode=(select id from opcode where name='checkcast')) as checkcastc,
-  sum(c.opcode=(select id from opcode where name='instanceof')) as instanceofc
+  0,0 -- sum(c.opcode=(select id from opcode where name='checkcast')) as checkcastc,
+  -- sum(c.opcode=(select id from opcode where name='instanceof')) as instanceofc
 from code c
 group by c.methodid;

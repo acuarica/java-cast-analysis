@@ -1,5 +1,6 @@
 
-select count(*) from jar
+select count(*) as jar_count
+from jar
 ;
-count(*)
+jar_count
 134156

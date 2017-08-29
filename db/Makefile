@@ -1,23 +1,17 @@
 
-SQLITE3=sqlite3
+include ../Makefile.local
 
-MAVENCLASS=$(HOME)/work/mavends/out/mavenclass-last.sqlite3
-SQLITE_FLAGS=-header -echo -bail
-SQLITE_FLAGS+=-cmd "ATTACH '$(MAVENCLASS)' as mavenclass"
-SQLITE_FLAGS+=-cmd "PRAGMA main.synchronous = OFF"
-SQLITE_FLAGS+=-cmd "PRAGMA main.journal_mode = OFF"
-SQLITE_FLAGS+=-cmd "PRAGMA main.locking_mode = EXCLUSIVE"
-SQLITE_FLAGS+=-cmd "PRAGMA mavenclass.synchronous = OFF"
-SQLITE_FLAGS+=-cmd "PRAGMA mavenclass.journal_mode = OFF"
-SQLITE_FLAGS+=-cmd "PRAGMA mavenclass.locking_mode = EXCLUSIVE"
+SQLITE_FLAGS+=-cmd "ATTACH '$(MAVENCLASS_DB)' as mavenclass"
+# SQLITE_FLAGS+=-cmd "PRAGMA main.synchronous = OFF"
+# SQLITE_FLAGS+=-cmd "PRAGMA main.journal_mode = OFF"
+# SQLITE_FLAGS+=-cmd "PRAGMA main.locking_mode = EXCLUSIVE"
+# SQLITE_FLAGS+=-cmd "PRAGMA mavenclass.synchronous = OFF"
+# SQLITE_FLAGS+=-cmd "PRAGMA mavenclass.journal_mode = OFF"
+# SQLITE_FLAGS+=-cmd "PRAGMA mavenclass.locking_mode = EXCLUSIVE"
 
-SRC=.
-BUILD=.
+DBS=$(patsubst %.sql,%.sqlite3,$(wildcard *.sql))
 
-SQLS=$(wildcard $(SRC)/*.sql)
-DBS=$(SQLS:$(SRC)/%.sql=$(BUILD)/%.sqlite3)
-
-createtables: $(DBS)
+all: $(DBS)
 
 %.sqlite3: %.sql
-	cat $< | $(SQLITE3) $(SQLITE_FLAGS) $@
+	cat $< | $(SQLITE) $(SQLITE_FLAGS) $@

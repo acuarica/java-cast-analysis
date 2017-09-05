@@ -3,4 +3,4 @@ select count(*) as code_count
 from code
 ;
 code_count
-4421391470
+3885451653

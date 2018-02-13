@@ -6,13 +6,13 @@
       {
         "lang": "java", 
         "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
-        "done": false, 
+        "done": true, 
         "key": 1506033946756, 
         "snapshotKey": "dist-1879340034-1516696672215", 
         "projectKey": 1878170062
       }
     ], 
-    "executionDate": 1518522105930, 
-    "key": 1506036386120
+    "executionDate": 1518525512177, 
+    "key": 1506037236313
   }
 }

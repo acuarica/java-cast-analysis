@@ -1,17 +1,20 @@
 
 QLS=$(wildcard ql/*.ql)
-RUNS=$(QLS:.ql=.run)
-RESULTS=$(QLS:.ql=.result)
+RUNS=$(QLS:ql/%.ql=out/%.run)
+RESULTS=$(QLS:ql/%.ql=out/%.result)
 
-.PRECIOUS: ql/%.run
+.PRECIOUS: out/%.run
 
 result: $(RESULTS)
 
-ql/%.run: ql/%.ql
+out/%.run: ql/%.ql | out
 	./lgtm.py run $< > $@
 
-ql/%.result: ql/%.run
+out/%.result: out/%.run
 	./lgtm.py results $< > $@
 
+out:
+	mkdir out
+
 clean:
-	rm ql/*.run ql/*.result
+	rm -r out/

@@ -1,18 +1,18 @@
 {
   "status": "success", 
   "data": {
-    "queryText": "import java\n\nfrom Expr e\nselect e\n", 
+    "queryText": "import java\n\nfrom CastExpr ce, TestMethod tm, RefType rt\nwhere ce.getEnclosingCallable() = tm and ce.getType() = rt\nselect ce, tm", 
     "runs": [
       {
         "lang": "java", 
         "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
         "done": true, 
-        "key": 1506034426282, 
+        "key": 1506043295977, 
         "snapshotKey": "dist-1879340034-1516696672215", 
         "projectKey": 1878170062
       }
     ], 
-    "executionDate": 1518520357891, 
-    "key": 1506038695989
+    "executionDate": 1518525513952, 
+    "key": 1506033946758
   }
 }

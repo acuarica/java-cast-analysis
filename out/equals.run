@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\npredicate isEquals(Method m) {\n  m.getName() = \"equals\" and m.getNumberOfParameters() = 1 and not m.isAbstract() and not m.isNative() and\n  m.getParameterType(0).getTypeDescriptor() = \"Ljava/lang/Object;\" and not m.getParameter(0).isVarargs() and\n  m.getReturnType().getTypeDescriptor() = \"Z\"\n}\n\nfrom CastExpr ce, Method m\nwhere ce.getEnclosingCallable() = m and isEquals(m)\nselect m", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": true, 
+        "key": 1506019976223, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518525507502, 
+    "key": 1506032046344
+  }
+}

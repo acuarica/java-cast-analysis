@@ -1,0 +1,17 @@
+{
+  "status": "success", 
+  "data": {
+    "endIndex": 0, 
+    "startIndex": 0, 
+    "rows": [], 
+    "metadata": {
+      "numResults": 0, 
+      "numExcludedResults": 0, 
+      "isInAlertFormat": false, 
+      "resultsWereTruncated": false, 
+      "columns": [
+        "m"
+      ]
+    }
+  }
+}

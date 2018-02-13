@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, MethodAccess ma, FieldAccess fa\nwhere ma = ce.getExpr() and\n    not ma.getMethod().isStatic() and not ma.getMethod().isVarargs() and\n    ma.getMethod().isPublic() and\n    ma.getMethod().getNumberOfParameters() = 1 and\n    ma.getMethod().getParameterType(0).getTypeDescriptor() = \"Ljava/lang/String;\" and\n    ma.getMethod().getReturnType().getTypeDescriptor() = \"Ljava/lang/Object;\" and\n    ma.getArgument(0).getType().getTypeDescriptor() = \"Ljava/lang/String;\" and\n    ma.getArgument(0) = fa and\n    fa.getField().isFinal() and fa.getField().isStatic() and //fa.getField().isPublic() and\n    fa.getField().getType().getTypeDescriptor() = \"Ljava/lang/String;\" // Double-check\nselect ce, \"Expression is \" + ce + \" \" + fa.getField().pp()\n", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506034446256, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518520927978, 
+    "key": 1506033696146
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce\nselect ce\n", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": true, 
+        "key": 1506037376040, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518520354961, 
+    "key": 1506038646026
+  }
+}

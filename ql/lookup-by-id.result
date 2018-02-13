@@ -1,0 +1,151 @@
+{
+  "status": "success", 
+  "data": {
+    "endIndex": 11, 
+    "startIndex": 0, 
+    "rows": [
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 258
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String TARGET_AUTH_STATE"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 259
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String CREDS_PROVIDER"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 261
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String HTTP_TARGET_HOST"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/MyRedirectHandler.java", 
+            "line": 112
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String HTTP_TARGET_HOST"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/MyRedirectHandler.java", 
+            "line": 119
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String HTTP_REQUEST"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/MyRedirectHandler.java", 
+            "line": 133
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String REDIRECT_LOCATIONS"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/PreemptiveAuthorizationHttpRequestInterceptor.java", 
+            "line": 39
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String TARGET_AUTH_STATE"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/PreemptiveAuthorizationHttpRequestInterceptor.java", 
+            "line": 40
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String CREDS_PROVIDER"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/PreemptiveAuthorizationHttpRequestInterceptor.java", 
+            "line": 42
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String HTTP_TARGET_HOST"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/RetryHandler.java", 
+            "line": 80
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String HTTP_REQ_SENT"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/RetryHandler.java", 
+            "line": 99
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... String HTTP_REQUEST"
+        }
+      ]
+    ], 
+    "metadata": {
+      "numResults": 11, 
+      "numExcludedResults": 0, 
+      "isInAlertFormat": true, 
+      "resultsWereTruncated": false, 
+      "columns": [
+        "ce", 
+        "col1"
+      ]
+    }
+  }
+}

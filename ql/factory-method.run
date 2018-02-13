@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, MethodAccess ma\nwhere ce.getExpr() = ma and ma.getMethod().getName() = \"getLogger\"\nselect ce, ma, ma.getQualifier()\n", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506033946755, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518521800998, 
+    "key": 1506039276008
+  }
+}

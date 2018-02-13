@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, LoopStmt ls\nwhere ls.getAChild*() = ce.getEnclosingStmt()\nselect ce, ls", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506033946756, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518522105930, 
+    "key": 1506036386120
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "status": "success", 
+  "data": {
+    "endIndex": 11, 
+    "startIndex": 0, 
+    "rows": [
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 266
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 1 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 433
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 1 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpRequest.java", 
+            "line": 142
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 1 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/JsonHttpResponseHandler.java", 
+            "line": 149
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 3 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/JsonHttpResponseHandler.java", 
+            "line": 200
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 3 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/JsonStreamerEntity.java", 
+            "line": 242
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 8 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/RequestParams.java", 
+            "line": 390
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 2 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/RequestParams.java", 
+            "line": 628
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 4 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/RequestParams.java", 
+            "line": 636
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 1 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/sample/src/main/java/com/loopj/android/http/sample/Redirect302Sample.java", 
+            "line": 90
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 1 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/sample/src/main/java/com/loopj/android/http/sample/SynchronousClientSample.java", 
+            "line": 64
+          }, 
+          "label": "stmt"
+        }, 
+        {
+          "label": "This if block performs a chain of 1 type tests - consider alternatives, e.g. polymorphism or the visitor pattern."
+        }
+      ]
+    ], 
+    "metadata": {
+      "numResults": 11, 
+      "numExcludedResults": 0, 
+      "isInAlertFormat": true, 
+      "resultsWereTruncated": false, 
+      "columns": [
+        "is", 
+        "col1"
+      ]
+    }
+  }
+}

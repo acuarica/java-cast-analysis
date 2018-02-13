@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nint instanceofCountForIfChain(IfStmt is) {\n  exists(int rest |\n    (\n      if is.getElse() instanceof IfStmt then\n        rest = instanceofCountForIfChain(is.getElse())\n      else\n        rest = 0\n    )\n    and\n    (\n      if is.getCondition() instanceof InstanceOfExpr then\n        result = 1 + rest\n      else\n        result = rest\n    )\n  )\n}\n\nfrom IfStmt is, int n\nwhere\n  n = instanceofCountForIfChain(is)\n  and n > 0\n  and not exists(IfStmt other | is = other.getElse())\nselect is,\n  \"This if block performs a chain of \" + n +\n  \" type tests - consider alternatives, e.g. polymorphism or the visitor pattern.\"\n", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506040455991, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518521215371, 
+    "key": 1506042275975
+  }
+}

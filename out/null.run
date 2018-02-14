@@ -1,18 +1,18 @@
 {
   "status": "success", 
   "data": {
-    "queryText": "import java\n\nfrom CastExpr ce\nselect ce, ce.getLocation()\n", 
+    "queryText": "import java\n\nfrom CastExpr ce, NullLiteral nl\nwhere ce.getExpr() = nl\nselect ce", 
     "runs": [
       {
         "lang": "java", 
         "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
         "done": false, 
-        "key": 1506041306214, 
+        "key": 1506040996017, 
         "snapshotKey": "dist-1879340034-1516696672215", 
         "projectKey": 1878170062
       }
     ], 
-    "executionDate": 1518618902628, 
-    "key": 1506033106583
+    "executionDate": 1518525624779, 
+    "key": 1506041966422
   }
 }

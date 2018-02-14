@@ -1,4 +1,4 @@
 import java
 
 from CastExpr ce
-select ce
+select ce, ce.getLocation()

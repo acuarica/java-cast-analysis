@@ -1,4 +1,4 @@
 import java
 
 from Expr e
-select e
+select e, e.getLocation()

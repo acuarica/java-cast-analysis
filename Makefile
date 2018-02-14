@@ -5,6 +5,7 @@ RESULTS=$(QLS:ql/%.ql=out/%.result)
 
 .PRECIOUS: out/%.run
 
+run: $(RUNS)
 result: $(RESULTS)
 
 out/%.run: ql/%.ql | out

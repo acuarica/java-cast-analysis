@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, MethodAccess ma\nwhere ce.getExpr() = ma and\n  ma.getQualifier().getType().getTypeDescriptor() = \"Ljava/lang/Throwable;\" and\n  ma.getMethod().getName() = \"getCause\"\nselect ce, ma", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506039206411, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518618950181, 
+    "key": 1506038436104
+  }
+}

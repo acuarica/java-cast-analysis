@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom InstanceOfExpr ioe, RefType t, RefType ct\nwhere t = ioe.getExpr().getType()\n  and ct = ioe.getTypeName().getType()\n  and ct = t.getASupertype+()\nselect ioe, \"There is no need to test whether an instance of $@ is also an instance of $@ - it always is.\",\n  t, t.getName(),\n  ct, ct.getName()", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506031866355, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518618944308, 
+    "key": 1506045966265
+  }
+}

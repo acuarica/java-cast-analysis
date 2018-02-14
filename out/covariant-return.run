@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, RefType rt, Method m, Method d, VirtualMethodAccess vma\nwhere ce.getType() = rt and ce.getEnclosingCallable() = m and m.overrides(d) and ce.getExpr() = vma  and vma.isOwnMethodAccess()\nselect ce, m, d, vma", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506036086525, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518527151292, 
+    "key": 1506038696043
+  }
+}

@@ -1,18 +1,18 @@
 {
   "status": "success", 
   "data": {
-    "queryText": "import java\n\nfrom CastExpr ce\nselect ce, ce.getLocation()\n", 
+    "queryText": "import java\n\nfrom CastExpr ce, SwitchStmt ss, RefType rt\nwhere ce.getType() = rt and exists(int n | ce.getEnclosingStmt() = ss.getStmt(n))\nselect ss", 
     "runs": [
       {
         "lang": "java", 
         "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
         "done": false, 
-        "key": 1506041306214, 
+        "key": 1506031756183, 
         "snapshotKey": "dist-1879340034-1516696672215", 
         "projectKey": 1878170062
       }
     ], 
-    "executionDate": 1518618902628, 
-    "key": 1506033106583
+    "executionDate": 1518534138003, 
+    "key": 1506031206514
   }
 }

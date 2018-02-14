@@ -6,11 +6,12 @@ import sys
 import json
 from pprint import pprint
 
-JSESSIONID = "JViYho_sotNviPWGucFxgg"
+JSESSIONID = "Be4IWCo8QONeMjrvdTjeFQ"
 lgtm_long_session = "761e071693a6bf51619ae10e567d9221f2c0a161c409e7a0b37f09fd4a8624d608f474f04d6ee2bc82f0ca95ce2ffcc90ae305f694638e6ab0e4bdef9e54eeed"
+nonce = "c21f09d757e9c940f06e3645f63a09dcc4c359ad25b41c2076e5ba98b7f854ad28b3d55836437ccad6f14091acab3d6fe665cfd4742caab8efaa8bb635485d6f"
+apiVersion = "61cc875ccc188f3805e0d7c033cd57903a4ea260"
+
 projectKeys="[1878170062]"
-nonce = "7c46c3a740eb5c1744dae1c4b71ea4b3b2bc872e866895f01a5e954bb80a65816f9d63a76783dfd1b2a26a7f193e82a42e43cf63fcdb99a06a9c4bb02296b275"
-apiVersion = "672a58deb8ba99a237ea301c277a6b18a64b1554"
 
 cookies = {'JSESSIONID': JSESSIONID, 'lgtm_long_session': lgtm_long_session}
 
@@ -68,5 +69,5 @@ if __name__ == '__main__':
     if r.status_code == 200:
         print(json.dumps(json.loads(r.text), indent=2))
     else:
-        raise Warning(r)
+        raise Warning(r, r.text)
         print r

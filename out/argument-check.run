@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom InstanceOfExpr ioe, CastExpr ce, Method m, Method d, Parameter p\nwhere ioe.getExpr() = p.getAnAccess() and ce.getExpr() = p.getAnAccess() and\n  m = ce.getEnclosingCallable() and m.overrides(d)\nselect ce, m, d", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": false, 
+        "key": 1506036786077, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518526815212, 
+    "key": 1506043896089
+  }
+}

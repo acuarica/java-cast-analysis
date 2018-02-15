@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, MethodAccess ma, RawType rt\nwhere ce.getExpr() = ma and ma.getQualifier().getType() = rt\nselect ce, ma", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": true, 
+        "key": 1506030606554, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518619767321, 
+    "key": 1506037496158
+  }
+}

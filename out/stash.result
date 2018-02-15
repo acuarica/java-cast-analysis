@@ -1,0 +1,91 @@
+{
+  "status": "success", 
+  "data": {
+    "endIndex": 6, 
+    "startIndex": 0, 
+    "rows": [
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpRequest.java", 
+            "line": 143
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... ResponseHandlerInterface responseHandler"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpResponseHandler.java", 
+            "line": 351
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... Object obj"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpResponseHandler.java", 
+            "line": 359
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... Object obj"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpResponseHandler.java", 
+            "line": 373
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... Object obj"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpResponseHandler.java", 
+            "line": 385
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... Object obj"
+        }
+      ], 
+      [
+        {
+          "fileLocation": {
+            "path": "/library/src/main/java/com/loopj/android/http/DataAsyncHttpResponseHandler.java", 
+            "line": 92
+          }, 
+          "label": "(...)..."
+        }, 
+        {
+          "label": "Expression is (...)... Object obj"
+        }
+      ]
+    ], 
+    "metadata": {
+      "numResults": 6, 
+      "numExcludedResults": 0, 
+      "isInAlertFormat": true, 
+      "resultsWereTruncated": false, 
+      "columns": [
+        "ce", 
+        "col1"
+      ]
+    }
+  }
+}

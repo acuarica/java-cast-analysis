@@ -7,12 +7,15 @@
     "metadata": {
       "numResults": 0, 
       "numExcludedResults": 0, 
-      "isInAlertFormat": false, 
+      "isInAlertFormat": true, 
       "resultsWereTruncated": false, 
       "columns": [
-        "ce", 
-        "ma", 
-        "col2"
+        "ioe", 
+        "col1", 
+        "t", 
+        "col3", 
+        "ct", 
+        "col5"
       ]
     }
   }

@@ -55,19 +55,21 @@ def getCustomQueryRunResults(filename):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run QL query.')
-    parser.add_argument('action', choices=['run', 'progress', 'results'])
-    parser.add_argument('filename', metavar='filename', nargs='?', help='Filename to run')
+    parser.add_argument('action', choices=['run', 'results'])
+    parser.add_argument('infile', metavar='infile', help='Input file to run')
+    parser.add_argument('outfile', metavar='outfile', help='Output file to run')
     args = parser.parse_args()
 
     if args.action == 'run':
-        r = runQuery(args.filename)
+        r = runQuery(args.infile)
     elif args.action == 'results':
-        r = getCustomQueryRunResults(args.filename)
+        r = getCustomQueryRunResults(args.infile)
 
     print >> sys.stderr, "[Status Code: %s (%s)]" % (r.status_code, r.reason)
 
     if r.status_code == 200:
-        print(json.dumps(json.loads(r.text), indent=2))
+        outjson = json.dumps(json.loads(r.text), indent=2)
+        with open(args.outfile, "w") as outfile:
+            outfile.write(outjson)
     else:
         raise Warning(r, r.text)
-        print r

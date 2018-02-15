@@ -7,17 +7,17 @@
       [
         {
           "fileLocation": {
-            "path": "/sample/src/main/java/com/loopj/android/http/sample/JsonStreamerSample.java", 
-            "line": 62
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 445
           }, 
           "label": "(...)..."
         }, 
         {
           "fileLocation": {
-            "path": "/sample/src/main/java/com/loopj/android/http/sample/JsonStreamerSample.java", 
-            "line": 62
+            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpClient.java", 
+            "line": 445
           }, 
-          "label": "next(...)"
+          "label": "get(...)"
         }
       ]
     ], 

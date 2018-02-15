@@ -1,0 +1,18 @@
+{
+  "status": "success", 
+  "data": {
+    "queryText": "import java\n\nfrom CastExpr ce, MethodAccess ma, Method m\nwhere ma = ce.getExpr() and m = ma.getMethod() and\n\tm.getName() = \"newInstance\"\nselect ce, \"Expression is \" + ce", 
+    "runs": [
+      {
+        "lang": "java", 
+        "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
+        "done": true, 
+        "key": 1506041485987, 
+        "snapshotKey": "dist-1879340034-1516696672215", 
+        "projectKey": 1878170062
+      }
+    ], 
+    "executionDate": 1518619765565, 
+    "key": 1506029276429
+  }
+}

@@ -11,8 +11,7 @@
       "resultsWereTruncated": false, 
       "columns": [
         "ce", 
-        "ma", 
-        "col2"
+        "ma"
       ]
     }
   }

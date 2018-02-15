@@ -10,9 +10,8 @@
       "isInAlertFormat": false, 
       "resultsWereTruncated": false, 
       "columns": [
-        "ce", 
-        "ma", 
-        "col2"
+        "rs", 
+        "ie"
       ]
     }
   }

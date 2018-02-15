@@ -7,28 +7,28 @@
       [
         {
           "fileLocation": {
-            "path": "/library/src/main/java/com/loopj/android/http/AsyncHttpResponseHandler.java", 
-            "line": 349
+            "path": "/library/src/main/java/com/loopj/android/http/RequestParams.java", 
+            "line": 629
           }, 
-          "label": "stmt"
+          "label": "(...)..."
         }
       ], 
       [
         {
           "fileLocation": {
-            "path": "/library/src/main/java/com/loopj/android/http/DataAsyncHttpResponseHandler.java", 
-            "line": 90
+            "path": "/library/src/main/java/com/loopj/android/http/RequestParams.java", 
+            "line": 645
           }, 
-          "label": "stmt"
+          "label": "(...)..."
         }
       ], 
       [
         {
           "fileLocation": {
-            "path": "/sample/src/main/java/com/loopj/android/http/sample/Http401AuthSample.java", 
-            "line": 206
+            "path": "/library/src/main/java/com/loopj/android/http/RequestParams.java", 
+            "line": 657
           }, 
-          "label": "stmt"
+          "label": "(...)..."
         }
       ]
     ], 
@@ -38,7 +38,7 @@
       "isInAlertFormat": false, 
       "resultsWereTruncated": false, 
       "columns": [
-        "ss"
+        "ce"
       ]
     }
   }

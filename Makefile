@@ -9,10 +9,10 @@ run: $(RUNS)
 result: $(RESULTS)
 
 out/%.run: ql/%.ql | out
-	./lgtm.py run $< > $@
+	./lgtm.py run $< $@
 
 out/%.result: out/%.run
-	./lgtm.py results $< > $@
+	./lgtm.py results $< $@
 
 out:
 	mkdir out

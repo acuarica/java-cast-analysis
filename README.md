@@ -227,3 +227,9 @@ In this way we can see how the casting are being used.**
 
 After the slicing, we could implement some sort of method equivalence to detect
 different patterns.
+
+## LGTM
+
+* all expressions ::  19.528
+* all casts: 102
+* all casts references: 84

@@ -1,18 +1,18 @@
 {
   "status": "success", 
   "data": {
-    "queryText": "import java\n\nfrom Expr e\nselect e, e.getLocation()\n", 
+    "queryText": "/**\n *\n */\n\nimport java\n\nfrom Expr e\nselect e\n", 
     "runs": [
       {
         "lang": "java", 
         "srcRevision": "f53deef7ad5b02b42b59dab92f66dec4fde8e1f6", 
-        "done": true, 
-        "key": 1506033646378, 
-        "snapshotKey": "dist-1879340034-1516696672215", 
+        "done": false, 
+        "key": 1506139576706, 
+        "snapshotKey": "dist-1879340034-1520931217023", 
         "projectKey": 1878170062
       }
     ], 
-    "executionDate": 1518619756794, 
-    "key": 1506036196525
+    "executionDate": 1522942935986, 
+    "key": 1506148936131
   }
 }

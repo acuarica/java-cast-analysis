@@ -6,10 +6,10 @@ import sys
 import json
 from pprint import pprint
 
-JSESSIONID = "Be4IWCo8QONeMjrvdTjeFQ"
+JSESSIONID = "ymSF5y1mn0HsGzq1JgP_Ww"
 lgtm_long_session = "761e071693a6bf51619ae10e567d9221f2c0a161c409e7a0b37f09fd4a8624d608f474f04d6ee2bc82f0ca95ce2ffcc90ae305f694638e6ab0e4bdef9e54eeed"
-nonce = "c21f09d757e9c940f06e3645f63a09dcc4c359ad25b41c2076e5ba98b7f854ad28b3d55836437ccad6f14091acab3d6fe665cfd4742caab8efaa8bb635485d6f"
-apiVersion = "61cc875ccc188f3805e0d7c033cd57903a4ea260"
+nonce = "6b5ad4e2de6c9cbfd48fb83161f358dea328ad4d9ae438b95e8dbfa89f640a4ccad4af05b9fb6cc14f123c472a9001fc670432885fafe9ddfeba93dad1336f4b"
+apiVersion = "3b7bf8713a07f49f4d37c41dc83d00e24ed13f37"
 
 projectKeys="[1878170062]"
 
